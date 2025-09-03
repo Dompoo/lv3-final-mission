@@ -1,0 +1,9 @@
+spring:
+  application.name: lv3-final-mission
+  datasource:
+    url: jdbc:h2:mem:database
+    username: sa
+
+randommer:
+  uri: test
+  api-key: test
