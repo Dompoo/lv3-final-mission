@@ -1,0 +1,10 @@
+spring:
+  config.activate.on-profile: dev
+  datasource:
+    url: jdbc:h2:mem:database
+    username: sa
+  h2.console.enabled: true
+
+randommer:
+  uri: https://randommer.io/api/Name?nameType=firstname&quantity=1
+  api-key: a85bca52610044efa8d0de08c81d2a2a
