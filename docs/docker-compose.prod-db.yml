@@ -1,0 +1,22 @@
+# 실행 방법
+#
+# 1. .env 파일에 비어있는 환경변수를 채운다.
+# 2. sudo docker compose --env-file .env up -d
+
+name: prod-db
+services:
+  mysql:
+    image: mysql:8.4.5
+    container_name: mysql
+    ports:
+      - '3306:3306'
+    environment:
+      - 'MYSQL_DATABASE=${MYSQL_DATABASE}'
+      - 'MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}'
+      - 'MYSQL_USER=${MYSQL_USERNAME}'
+      - 'MYSQL_PASSWORD=${MYSQL_PASSWORD}'
+    volumes:
+      - /var/lib/mysql:/var/lib/mysql
+    restart: unless-stopped
+
+
